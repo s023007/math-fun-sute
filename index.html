@@ -1,159 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MathFun – Learn with Games</title>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<!-- ========== HEADER ========== -->
+<!-- ===== HEADER ===== -->
 <header>
   <div class="container flex-between">
     <h1 class="logo" data-key="logo">MathFun</h1>
-
     <nav>
       <ul class="nav-list">
         <li><a href="#games" data-key="navGames">Games</a></li>
         <li><a href="#parents" data-key="navParents">Parents</a></li>
         <li><a href="#teachers" data-key="navTeachers">Teachers</a></li>
         <li><a href="#about" data-key="navAbout">About</a></li>
-        <!-- زر التبديل -->
         <li><a href="#" id="langSwitch">AR</a></li>
       </ul>
     </nav>
   </div>
-</header>
-
-<!-- ========== HERO ========== -->
-<section class="hero">
+</header><!-- ===== HERO ===== --><section class="hero">
   <div class="container">
     <div class="video-wrapper">
-      <!-- تمت إزالة mute و autoplay حتى يعمل الصوت عند النقر -->
-      <iframe
-        src="https://www.youtube.com/embed/EvTnfmCcp9w?loop=1&playlist=EvTnfmCcp9w"
-        title="Math learning promo"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/EvTnfmCcp9w?loop=1&playlist=EvTnfmCcp9w" title="Math promo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-
     <h2 data-key="heroTitle">Discover Math the Fun Way!</h2>
     <p data-key="heroText">Interactive educational games for kids aged 5 – 12</p>
     <a href="#games" class="btn btn-primary" data-key="btnStart">Get Started</a>
   </div>
-</section>
-
-<!-- ========== GAMES ========== -->
-<section id="games" class="section light">
+</section><!-- ===== GAMES ===== --><section id="games" class="section light">
   <div class="container">
     <h2 class="section-title" data-key="gamesTitle">Educational Games</h2>
-
     <div class="game-grid">
       <div class="game-card">
-        <img src="https://picsum.photos/id/1056/400/300" alt="Addition Game">
+        <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" alt="Counting Stars icon" />
+        <h3 data-key="gameCount">Counting Stars</h3>
+        <a href="games/counting.html" class="btn btn-secondary" data-key="play">Play</a>
+      </div>
+      <div class="game-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3314/3314469.png" alt="Addition Game" />
         <h3 data-key="gameAdd">Addition Game</h3>
         <a href="games/addition.html" class="btn btn-secondary" data-key="play">Play</a>
       </div>
-
       <div class="game-card">
-        <img src="https://picsum.photos/id/1066/400/300" alt="Compare Numbers">
-        <h3 data-key="gameCompare">Compare Numbers</h3>
-        <a href="games/compare.html" class="btn btn-secondary" data-key="play">Play</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/3314/3314413.png" alt="Subtraction Challenge" />
+        <h3 data-key="gameSub">Subtraction Challenge</h3>
+        <a href="games/subtraction.html" class="btn btn-secondary" data-key="play">Play</a>
       </div>
-
       <div class="game-card">
-        <img src="https://picsum.photos/id/1043/400/300" alt="Drag the Right Number">
-        <h3 data-key="gameDrag">Drag the Right Number</h3>
-        <a href="games/drag.html" class="btn btn-secondary" data-key="play">Play</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/3314/3314439.png" alt="Multiplication Quest" />
+        <h3 data-key="gameMul">Multiplication Quest</h3>
+        <a href="games/multiplication.html" class="btn btn-secondary" data-key="play">Play</a>
+      </div>
+      <div class="game-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3314/3314453.png" alt="Fractions Explorer" />
+        <h3 data-key="gameFrac">Fractions Explorer</h3>
+        <a href="games/fractions.html" class="btn btn-secondary" data-key="play">Play</a>
+      </div>
+      <div class="game-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3314/3314483.png" alt="Geometry Adventure" />
+        <h3 data-key="gameGeo">Geometry Adventure</h3>
+        <a href="games/geometry.html" class="btn btn-secondary" data-key="play">Play</a>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ========== PARENTS ========== -->
-<section id="parents" class="section">
+</section><!-- ===== PARENTS ===== --><section id="parents" class="section">
   <div class="container">
     <h2 class="section-title" data-key="parentsTitle">For Parents</h2>
-    <p data-key="parentsText">Help your child fall in love with math through engaging, game-based learning.</p>
+    <p data-key="parentsText">Help your child fall in love with math through engaging, game‑based learning.</p>
   </div>
-</section>
-
-<!-- ========== TEACHERS ========== -->
-<section id="teachers" class="section alt">
+</section><!-- ===== TEACHERS ===== --><section id="teachers" class="section alt">
   <div class="container">
     <h2 class="section-title" data-key="teachersTitle">For Teachers</h2>
-    <p data-key="teachersText">Classroom-ready tools that turn abstract numbers into fun, visual experiences.</p>
+    <p data-key="teachersText">Classroom‑ready tools that turn abstract numbers into fun, visual experiences.</p>
   </div>
-</section>
-
-<!-- ========== ABOUT ========== -->
-<section id="about" class="section">
+</section><!-- ===== ABOUT ===== --><section id="about" class="section">
   <div class="container">
     <h2 class="section-title" data-key="aboutTitle">About MathFun</h2>
     <p data-key="aboutText">MathFun is a free platform that helps children master math concepts through play and exploration.</p>
   </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-<footer>
+</section><!-- ===== FOOTER ===== --><footer>
   <div class="container center">© 2025 MathFun. All rights reserved.</div>
-</footer>
-
-<!-- ========== LANGUAGE SCRIPT ========== -->
-<script>
+</footer><!-- ===== LANGUAGE / RTL SCRIPT ===== --><script>
 const translations = {
   ar: {
-    logo: 'متعة الرياضيات',
-    navGames: 'الألعاب',
-    navParents: 'للأهل',
-    navTeachers: 'للمعلمين',
-    navAbout: 'عن الموقع',
-    heroTitle: 'اكتشف الرياضيات بطريقة ممتعة!',
-    heroText: 'ألعاب تعليمية تفاعلية للأطفال من 5 إلى 12 سنة',
-    btnStart: 'ابدأ الآن',
-    gamesTitle: 'ألعاب تعليمية',
-    gameAdd: 'لعبة الجمع',
-    gameCompare: 'مقارنة الأعداد',
-    gameDrag: 'اسحب الرقم الصحيح',
-    play: 'العب',
-    parentsTitle: 'للأهل',
-    parentsText: 'ساعد طفلك على حب الرياضيات عبر التعلم باللعب.',
-    teachersTitle: 'للمعلمين',
-    teachersText: 'أدوات صفية تحول الأرقام المجردة إلى تجارب ممتعة.',
-    aboutTitle: 'عن متعة الرياضيات',
-    aboutText: 'منصة مجانية تساعد الأطفال على إتقان الرياضيات من خلال اللعب والاستكشاف.'
+    logo:'متعة الرياضيات',navGames:'الألعاب',navParents:'للأهل',navTeachers:'للمعلمين',navAbout:'عن الموقع',
+    heroTitle:'اكتشف الرياضيات بطريقة ممتعة!',heroText:'ألعاب تعليمية تفاعلية للأطفال من 5 إلى 12 سنة',btnStart:'ابدأ الآن',
+    gamesTitle:'ألعاب تعليمية',gameCount:'عدّ النجوم',gameAdd:'لعبة الجمع',gameSub:'تحدي الطرح',gameMul:'مهمة الضرب',gameFrac:'استكشاف الكسور',gameGeo:'مغامرة الهندسة',play:'العب',
+    parentsTitle:'للأهل',parentsText:'ساعد طفلك على حب الرياضيات بالتعلم عبر اللعب.',
+    teachersTitle:'للمعلمين',teachersText:'أدوات صفية تجعل الأرقام ممتعة ومرئية.',
+    aboutTitle:'عن متعة الرياضيات',aboutText:'منصة مجانية تساعد الأطفال على إتقان المفاهيم الرياضية عبر اللعب.'
+  },
+  fr: {
+    logo:'MathFun',navGames:'Jeux',navParents:'Parents',navTeachers:'Enseignants',navAbout:'À propos',
+    heroTitle:'Découvrez les maths en vous amusant !',heroText:'Jeux éducatifs interactifs pour les 5–12 ans',btnStart:'Commencer',
+    gamesTitle:'Jeux éducatifs',gameCount:'Compter les étoiles',gameAdd:"Jeu d'addition",gameSub:'Défi de soustraction',gameMul:'Quête de multiplication',gameFrac:'Explorateur de fractions',gameGeo:'Aventure géométrie',play:'Jouer',
+    parentsTitle:'Pour les parents',parentsText:"Aidez votre enfant à aimer les maths grâce au jeu.",
+    teachersTitle:'Pour les enseignants',teachersText:'Des outils ludiques pour la classe.',
+    aboutTitle:'À propos de MathFun',aboutText:'Plateforme gratuite pour maîtriser les maths en jouant.'
+  },
+  es: {
+    logo:'MathFun',navGames:'Juegos',navParents:'Padres',navTeachers:'Profesores',navAbout:'Acerca de',
+    heroTitle:'¡Descubre las matemáticas de forma divertida!',heroText:'Juegos educativos interactivos para niños de 5 a 12 años',btnStart:'Empezar',
+    gamesTitle:'Juegos educativos',gameCount:'Contar Estrellas',gameAdd:'Juego de Sumas',gameSub:'Reto de Restas',gameMul:'Misión de Multiplicación',gameFrac:'Explorador de Fracciones',gameGeo:'Aventura de Geometría',play:'Jugar',
+    parentsTitle:'Para los padres',parentsText:'Ayude a su hijo a amar las matemáticas a través del juego.',
+    teachersTitle:'Para los profesores',teachersText:'Herramientas que hacen las matemáticas divertidas.',
+    aboutTitle:'Sobre MathFun',aboutText:'Una plataforma gratuita para dominar las matemáticas jugando.'
   }
 };
 
-const langSwitch = document.getElementById('langSwitch');
-let currentLang = 'en';
+const available = ['en','ar','fr','es'];
+let current = 0; // 0=en
 
-langSwitch.addEventListener('click', e => {
+const switchBtn = document.getElementById('langSwitch');
+switchBtn.addEventListener('click',e=>{
   e.preventDefault();
-  currentLang = currentLang === 'en' ? 'ar' : 'en';
-  applyLang(currentLang);
+  current = (current + 1) % available.length;
+  const lang = available[current];
+  applyLang(lang);
 });
 
-function applyLang(lang) {
-  // بدّل اتجاه الصفحة للعربية
-  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-
-  // بدّل نص زر التبديل
-  langSwitch.textContent = (lang === 'ar') ? 'EN' : 'AR';
-
-  // إذا إنجليزي => لا شيء
-  if (lang === 'en') return;
-
-  // طبّق الترجمات
-  document.querySelectorAll('[data-key]').forEach(el => {
-    const key = el.getAttribute('data-key');
-    if (translations[lang][key]) el.textContent = translations[lang][key];
+function applyLang(lang){
+  document.documentElement.dir = (lang==='ar')?'rtl':'ltr';
+  switchBtn.textContent = available[(current+1)%available.length].toUpperCase();
+  if(lang==='en') return; // default text already English
+  document.querySelectorAll('[data-key]').forEach(el=>{
+    const key = el.dataset.key;
+    if(translations[lang][key]) el.textContent = translations[lang][key];
   });
+  // Change font for Arabic
+  document.body.style.fontFamily = (lang==='ar')?'"Cairo", sans-serif':'"Poppins", sans-serif';
 }
-</script>
-</body>
+</script></body>
 </html>
