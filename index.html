@@ -40,8 +40,9 @@
 <section class="hero">
   <div class="container">
     <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/EvTnfmCcp9w?loop=1&playlist=EvTnfmCcp9w"
-              title="Math promo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe
+        src="https://www.youtube.com/embed/EvTnfmCcp9w?loop=1&playlist=EvTnfmCcp9w"
+        title="Math promo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
     <h2 data-key="heroTitle">Discover Math the Fun Way!</h2>
@@ -124,54 +125,64 @@
 
 <!-- ===== LANGUAGE SCRIPT ===== -->
 <script>
-/* ===== translations ===== */
+/* --------- ثابتات الترجمة للعربية والفرنسية والإسبانية -------- */
 const translations = {
   ar:{logo:'متعة الرياضيات',navGames:'الألعاب',navParents:'للأهل',navTeachers:'للمعلمين',navAbout:'عن الموقع',
       heroTitle:'اكتشف الرياضيات بطريقة ممتعة!',heroText:'ألعاب تعليمية تفاعلية للأطفال من 5 إلى 12 سنة',btnStart:'ابدأ الآن',
       gamesTitle:'ألعاب تعليمية',gameCount:'عدّ النجوم',gameAdd:'لعبة الجمع',gameSub:'تحدي الطرح',gameMul:'مهمة الضرب',gameFrac:'استكشاف الكسور',gameGeo:'مغامرة الهندسة',play:'العب',
-      parentsTitle:'للأهل',parentsText:'ساعد طفلك على حب الرياضيات بالتعلم باللعب.',
+      parentsTitle:'للأهل',parentsText:'ساعد طفلك على حب الرياضيات من خلال التعلم باللعب.',
       teachersTitle:'للمعلمين',teachersText:'أدوات صفية تجعل الأرقام ممتعة ومرئية.',
-      aboutTitle:'عن متعة الرياضيات',aboutText:'منصة مجانية تساعد الأطفال على إتقان الرياضيات من خلال اللعب.'},
+      aboutTitle:'عن متعة الرياضيات',aboutText:'منصة مجانية تساعد الأطفال على إتقان المفاهيم الرياضية عبر اللعب.'},
   fr:{logo:'MathFun',navGames:'Jeux',navParents:'Parents',navTeachers:'Enseignants',navAbout:'À propos',
-      heroTitle:'Découvrez les maths en vous amusant !',heroText:'Jeux éducatifs interactifs pour les 5–12 ans',btnStart:'Commencer',
+      heroTitle:'Découvrez les maths en vous amusant !',heroText:'Jeux interactifs pour les 5-12 ans',btnStart:'Commencer',
       gamesTitle:'Jeux éducatifs',gameCount:'Compter les étoiles',gameAdd:\"Jeu d'addition\",gameSub:'Défi de soustraction',gameMul:'Quête de multiplication',gameFrac:'Explorateur de fractions',gameGeo:'Aventure géométrie',play:'Jouer',
       parentsTitle:'Pour les parents',parentsText:'Aidez votre enfant à aimer les maths grâce au jeu.',
       teachersTitle:'Pour les enseignants',teachersText:'Des outils ludiques pour la classe.',
       aboutTitle:'À propos de MathFun',aboutText:'Plateforme gratuite pour maîtriser les maths en jouant.'},
   es:{logo:'MathFun',navGames:'Juegos',navParents:'Padres',navTeachers:'Profesores',navAbout:'Acerca de',
-      heroTitle:'¡Descubre las matemáticas de forma divertida!',heroText:'Juegos educativos interactivos para niños de 5 a 12 años',btnStart:'Empezar',
+      heroTitle:'¡Descubre las matemáticas de forma divertida!',heroText:'Juegos interactivos para niños de 5-12 años',btnStart:'Empezar',
       gamesTitle:'Juegos educativos',gameCount:'Contar estrellas',gameAdd:'Juego de sumas',gameSub:'Reto de restas',gameMul:'Misión de multiplicación',gameFrac:'Explorador de fracciones',gameGeo:'Aventura de geometría',play:'Jugar',
       parentsTitle:'Para los padres',parentsText:'Ayude a su hijo a amar las matemáticas a través del juego.',
       teachersTitle:'Para los profesores',teachersText:'Herramientas que hacen las matemáticas divertidas.',
-      aboutTitle:'Sobre MathFun',aboutText:'Una plataforma gratuita para dominar las matemáticas jugando.'}
+      aboutTitle:'Sobre MathFun',aboutText:'Plataforma gratuita para dominar las matemáticas jugando.'}
 };
-/* ===== language menu ===== */
-const available=['en','ar','fr','es'];
-let current='en';
+/* --------- حفظ النصوص الإنجليزية الأصلية -------- */
+translations.en = {};
+document.querySelectorAll('[data-key]').forEach(el=>{
+  translations.en[el.dataset.key] = el.textContent;
+});
 
-const langToggle=document.getElementById('langToggle');
-const langList=document.getElementById('langList');
+/* عناصر القائمة المنسدلة */
+const langToggle = document.getElementById('langToggle');
+const langList   = document.getElementById('langList');
 
-langToggle.addEventListener('click',e=>{
+/* إظهار/إخفاء القائمة */
+langToggle.addEventListener('click', e=>{
   e.preventDefault();
-  langList.style.display=(langList.style.display==='block')?'none':'block';
+  langList.style.display = (langList.style.display==='block')?'none':'block';
 });
 
-langList.addEventListener('click',e=>{
-  if(e.target.tagName!=='LI') return;
+/* اختيار لغة */
+langList.addEventListener('click', e=>{
+  if(e.target.tagName !== 'LI') return;
   applyLang(e.target.dataset.lang);
-  langList.style.display='none';
+  langList.style.display = 'none';
 });
 
+/* تفعيل لغة */
 function applyLang(lang){
-  current=lang;
-  document.documentElement.dir=(lang==='ar')?'rtl':'ltr';
-  document.body.style.fontFamily=(lang==='ar')?'\"Cairo\", sans-serif':'\"Poppins\", sans-serif';
+  /* اتجاه النص والخط */
+  document.documentElement.dir = (lang==='ar')?'rtl':'ltr';
+  document.body.style.fontFamily = (lang==='ar')
+        ? '"Cairo", sans-serif' : '"Poppins", sans-serif';
 
+  /* تبديل النصوص */
   document.querySelectorAll('[data-key]').forEach(el=>{
-    const k=el.dataset.key;
-    if(lang==='en'){ el.textContent=translations['ar'][k] ? translations['en']?.[k]||el.textContent : el.textContent; }
-    else if(translations[lang][k]) el.textContent=translations[lang][k];
+    const k = el.dataset.key;
+    if(lang==='en'){ el.textContent = translations.en[k]; }
+    else if(translations[lang] && translations[lang][k]){
+      el.textContent = translations[lang][k];
+    }
   });
 }
 </script>
