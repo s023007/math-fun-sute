@@ -1,87 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MathFun - Educational Math Games</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathFun – Learn with Games</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- ===== HEADER ===== -->
   <header>
-    <div class="container center">
-      <h1>MathFun</h1>
+    <div class="container flex-between">
+      <h1 class="logo">MathFun</h1>
       <nav>
-        <ul>
+        <ul class="nav-list">
           <li><a href="#games">Games</a></li>
           <li><a href="#parents">Parents</a></li>
           <li><a href="#teachers">Teachers</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Language: EN</a></li>
+          <li><a href="#">EN | AR</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="container center">
-      <video width="100%" height="auto" controls poster="images/video-poster.jpg">
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <h2>Enjoy Math Through Interactive Games!</h2>
-      <p>Perfect for kids aged 5 to 12</p>
-      <a href="#games" class="btn">Start Now</a>
+    <div class="container">
+      <!-- فيديو ترويجي (يوتيوب) -->
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/EvTnfmCcp9w?autoplay=1&mute=1&loop=1&playlist=EvTnfmCcp9w"
+          title="Math learning promo"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h2>Discover Math the Fun Way!</h2>
+      <p>Interactive educational games for kids aged 5 – 12</p>
+      <a href="#games" class="btn btn-primary">Get Started</a>
     </div>
   </section>
 
-  <section id="games" class="games">
-    <div class="container center">
-      <h2>Educational Games</h2>
+  <!-- ===== GAMES ===== -->
+  <section id="games" class="section light">
+    <div class="container">
+      <h2 class="section-title">Educational Games</h2>
+
       <div class="game-grid">
+        <!-- Addition -->
         <div class="game-card">
-          <img src="images/addition.png" alt="Addition Game">
+          <img src="https://images.unsplash.com/photo-1600195118188-6e7193ac8f5c?auto=format&fit=crop&w=400&h=300&q=80"
+               alt="Addition Game">
           <h3>Addition Game</h3>
-          <a href="games/addition.html" class="btn">Play</a>
+          <a href="games/addition.html" class="btn btn-secondary">Play</a>
         </div>
+
+        <!-- Compare -->
         <div class="game-card">
-          <img src="images/compare.png" alt="Compare Numbers">
+          <img src="https://images.unsplash.com/photo-1518133927612-4e4e04e6d7d3?auto=format&fit=crop&w=400&h=300&q=80"
+               alt="Compare Numbers">
           <h3>Compare Numbers</h3>
-          <a href="games/compare.html" class="btn">Play</a>
+          <a href="games/compare.html" class="btn btn-secondary">Play</a>
         </div>
+
+        <!-- Drag -->
         <div class="game-card">
-          <img src="images/drag.png" alt="Drag the Right Number">
+          <img src="https://images.unsplash.com/photo-1526234151738-253951d6c8d9?auto=format&fit=crop&w=400&h=300&q=80"
+               alt="Drag the Right Number">
           <h3>Drag the Right Number</h3>
-          <a href="games/drag.html" class="btn">Play</a>
+          <a href="games/drag.html" class="btn btn-secondary">Play</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="parents" class="info">
-    <div class="container center">
-      <h2>For Parents</h2>
-      <p>Help your child love math through fun learning. Interactive content improves school performance.</p>
+  <!-- ===== PARENTS ===== -->
+  <section id="parents" class="section">
+    <div class="container">
+      <h2 class="section-title">For Parents</h2>
+      <p>Help your child fall in love with math through engaging, game-based learning.</p>
     </div>
   </section>
 
-  <section id="teachers" class="info">
-    <div class="container center">
-      <h2>For Teachers</h2>
-      <p>Teaching tools that make math engaging, effective, and fun for your classroom.</p>
+  <!-- ===== TEACHERS ===== -->
+  <section id="teachers" class="section alt">
+    <div class="container">
+      <h2 class="section-title">For Teachers</h2>
+      <p>Classroom-ready tools that turn abstract numbers into fun, visual experiences.</p>
     </div>
   </section>
 
-  <section id="about" class="info">
-    <div class="container center">
-      <h2>About MathFun</h2>
-      <p>A free educational platform bringing math to life through games and interactive activities.</p>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About MathFun</h2>
+      <p>MathFun is a free platform that helps children master math concepts through play and exploration.</p>
     </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="container center">
-      <p>© 2025 MathFun. All rights reserved.</p>
-    </div>
+    <div class="container center">© 2025 MathFun. All rights reserved.</div>
   </footer>
 </body>
 </html>
