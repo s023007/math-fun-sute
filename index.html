@@ -125,7 +125,7 @@
 
 <!-- ===== LANGUAGE SCRIPT ===== -->
 <script>
-/* --------- ثابتات الترجمة للعربية والفرنسية والإسبانية -------- */
+/* --------- ترجمات ثابتة -------- */
 const translations = {
   ar:{logo:'متعة الرياضيات',navGames:'الألعاب',navParents:'للأهل',navTeachers:'للمعلمين',navAbout:'عن الموقع',
       heroTitle:'اكتشف الرياضيات بطريقة ممتعة!',heroText:'ألعاب تعليمية تفاعلية للأطفال من 5 إلى 12 سنة',btnStart:'ابدأ الآن',
@@ -146,43 +146,40 @@ const translations = {
       teachersTitle:'Para los profesores',teachersText:'Herramientas que hacen las matemáticas divertidas.',
       aboutTitle:'Sobre MathFun',aboutText:'Plataforma gratuita para dominar las matemáticas jugando.'}
 };
+
 /* --------- حفظ النصوص الإنجليزية الأصلية -------- */
 translations.en = {};
 document.querySelectorAll('[data-key]').forEach(el=>{
   translations.en[el.dataset.key] = el.textContent;
 });
 
-/* عناصر القائمة المنسدلة */
+/* عناصر القائمة */
 const langToggle = document.getElementById('langToggle');
 const langList   = document.getElementById('langList');
 
 /* إظهار/إخفاء القائمة */
 langToggle.addEventListener('click', e=>{
   e.preventDefault();
-  langList.style.display = (langList.style.display==='block')?'none':'block';
+  langList.classList.toggle('show');
 });
 
 /* اختيار لغة */
 langList.addEventListener('click', e=>{
-  if(e.target.tagName !== 'LI') return;
+  if(e.target.tagName!=='LI') return;
   applyLang(e.target.dataset.lang);
-  langList.style.display = 'none';
+  langList.classList.remove('show');
 });
 
 /* تفعيل لغة */
 function applyLang(lang){
-  /* اتجاه النص والخط */
-  document.documentElement.dir = (lang==='ar')?'rtl':'ltr';
-  document.body.style.fontFamily = (lang==='ar')
-        ? '"Cairo", sans-serif' : '"Poppins", sans-serif';
+  document.documentElement.dir = (lang==='ar') ? 'rtl' : 'ltr';
+  document.body.style.fontFamily = (lang==='ar') ? '"Cairo",sans-serif' : '"Poppins",sans-serif';
 
-  /* تبديل النصوص */
   document.querySelectorAll('[data-key]').forEach(el=>{
     const k = el.dataset.key;
-    if(lang==='en'){ el.textContent = translations.en[k]; }
-    else if(translations[lang] && translations[lang][k]){
-      el.textContent = translations[lang][k];
-    }
+    el.textContent = (lang==='en')
+        ? translations.en[k]
+        : translations[lang]?.[k] || translations.en[k];
   });
 }
 </script>
