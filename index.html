@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>MathFun – Learn with Games</title>
 
-  <!-- Google-Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@400;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,15 +18,15 @@
   <a href="#" class="phone-ico" aria-label="phone">☎</a>
 </header>
 
-<!-- ░░ OFF-CANVAS DRAWER ░░ -->
+<!-- ░░ DRAWER ░░ -->
 <aside id="drawer">
   <div class="drawer-head">
-    <button id="closeDrawer" aria-label="close">&times;</button>
+    <button id="closeDrawer">&times;</button>
     <h2 class="logo mini">MathFun</h2>
 
     <!-- language picker -->
     <div class="lang-picker" id="langPicker">
-      <img src="https://flagcdn.com/24x18/gb.png" id="currentFlag" alt="flag">
+      <img src="https://flagcdn.com/24x18/gb.png" id="currentFlag" alt="">
       <span id="currentLang">EN</span>
       <ul class="lang-list">
         <li data-lang="en" data-flag="gb">English</li>
@@ -37,20 +37,33 @@
     </div>
   </div>
 
+  <!-- MAIN list -->
   <ul class="drawer-list" id="mainList">
-    <li><a href="#teachers" data-key="navTeachers">For Teachers</a></li>
-    <li><a href="#parents"  data-key="navParents" >For Parents</a></li>
-
+    <li class="section-lbl">Product</li>
     <li class="nav-link" data-target="activityPage" data-key="mathAct">Maths Activities ›</li>
-    <li class="nav-link" data-target="countryPage">Choose Country</li>
+    <li>Technical Requirements</li>
+    <li>System Requirements Checker</li>
+    <li>Multilingual</li>
+    <li>Our Pedagogy</li>
+    <li>Maths Quizzes</li>
 
-    <li><a href="#contact" data-key="contact">Contact Us</a></li>
+    <li class="section-lbl">Resources</li>
+    <li>Efficacy Study</li>
+    <li>Blog</li>
+
+    <li class="section-lbl">Company</li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Support</a></li>
+    <li><a href="#">Book A Demo</a></li>
+    <li><a href="#">Sales Enquiry</a></li>
+    <li><a href="#">Careers</a></li>
 
     <li class="cta"><a href="#">Log in</a></li>
     <li class="cta solid"><a href="#" data-key="tryBtn">Try MathFun</a></li>
   </ul>
 
-  <!-- Maths Activities PAGE -->
+  <!-- Maths Activities -->
   <div class="drawer-page" id="activityPage">
     <div class="sub-head"><button class="backBtn">‹</button><span data-key="mathAct">Maths Activities</span></div>
 
@@ -62,21 +75,8 @@
 
     <h4>By Topics</h4>
     <ul class="sub-list">
-      <li>Numbers up to 20</li><li>Numbers up to 100</li><li>Numbers up to 1000</li><li>Large numbers</li>
-      <li>Number theory</li><li>Fractions</li><li>Decimals</li><li>Negative numbers</li>
-      <li>Real numbers</li><li>Ratio & proportion</li><li>Percentages</li><li>Powers & roots</li>
-      <li>Sequences</li><li>Algebra & equations</li><li>2D geometry</li><li>The Cartesian plane</li>
-      <li>3D geometry</li><li>Measurement</li><li>Data & statistics</li><li>Probability</li>
-      <li>Mathematical thinking</li><li>Other activities</li>
-    </ul>
-  </div>
-
-  <!-- Country PAGE -->
-  <div class="drawer-page" id="countryPage">
-    <div class="sub-head"><button class="backBtn">‹</button>Choose your country</div>
-    <ul class="sub-list">
-      <li>Africa / Middle East</li><li>Asia-Pacific</li><li>Europe</li>
-      <li>North America</li><li>South America</li><li>International</li>
+      <li>Numbers up to 20</li><li>Fractions</li><li>Decimals</li><li>Algebra & equations</li>
+      <li>Geometry</li><li>Data & statistics</li><li>Probability</li><li>Other activities</li>
     </ul>
   </div>
 </aside>
@@ -85,19 +85,17 @@
 <!-- ░░ HERO ░░ -->
 <section class="hero">
   <div class="container hero-inner">
-
-    <!-- فيديو مضمّن -->
     <div class="video-frame">
       <iframe src="https://www.youtube.com/embed/EvTnfmCcp9w?rel=0&modestbranding=1&playsinline=1"
-              title="MathFun promo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              title="MathFun promo" allow="autoplay;encrypted-media" allowfullscreen></iframe>
     </div>
 
     <h2 data-key="heroTitle">The maths app students love that improves results</h2>
     <p  data-key="heroText">Helping learners aged 4-15 excel at maths.</p>
 
     <div class="cta-row">
-      <a href="#" class="cta-box solid"  data-key="ctaTeach">Educators Try for Free</a>
-      <a href="#" class="cta-box outline" data-key="ctaPar">Parents Try for Free</a>
+      <a href="#" class="cta-box solid"   data-key="ctaTeach">Educators Try for Free</a>
+      <a href="#" class="cta-box outline" data-key="ctaPar"  >Parents Try for Free</a>
     </div>
 
     <a href="#studentExp" class="big-cta" data-key="explore">Explore Activities</a>
@@ -110,8 +108,8 @@
     <h2 class="section-title left-orange">Student Experience</h2>
 
     <div class="collage">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="">
-      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=800" alt="">
+      <img src="https://images.unsplash.com/photo-1584697964154-b7739e85eaf6?w=900" alt="">
+      <img src="https://images.unsplash.com/photo-1612831662538-a1116aa7143b?w=900" alt="">
     </div>
 
     <h2 class="headline">The World’s Best<br>Maths Activities</h2>
@@ -119,22 +117,22 @@
   </div>
 </section>
 
-<!-- ░░ ADAPTIVE LEARNING PATH ░░ -->
+<!-- ░░ ADAPTIVE PATH ░░ -->
 <section class="section">
   <div class="container">
-    <h2 class="headline center">A personalised &amp; adaptive<br><span class="orange">learning</span> path</h2>
+    <h2 class="headline center">A personalised &amp; adaptive <span class="orange">learning</span> path</h2>
     <p class="subhead center small">Mathematics activities for primary school children with a rigorous pedagogy designed by education experts.</p>
 
     <ul class="levels"><li>F</li><li>1</li><li>2</li><li class="active">3</li><li>4</li><li>5</li><li>6</li></ul>
 
     <div class="card-grid">
       <div class="act-card">
-        <img src="https://images.unsplash.com/photo-1568600891621-2ead54f3f37b?w=600" alt="">
+        <img src="https://images.unsplash.com/photo-1604079621523-c52fc07b7939?w=800" alt="">
         <h3>Add multiples of 10 or 100 and three-digit numbers</h3>
         <span class="tag">Addition</span>
       </div>
       <div class="act-card">
-        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600" alt="">
+        <img src="https://images.unsplash.com/photo-1522276499272-3046a1b9e3d8?w=800" alt="">
         <h3>Recognise halves, thirds, quarters</h3>
         <span class="tag">Fractions</span>
       </div>
@@ -154,32 +152,76 @@
   </div>
 </section>
 
+<!-- ░░ GET STARTED ░░ -->
+<section class="section light">
+  <div class="container">
+    <h2 class="headline center"><span class="orange">Get started</span> with MathFun, try for free</h2>
+
+    <div class="gs-grid">
+      <a href="#" class="gs-card"><img src="https://raw.githubusercontent.com/ionic-team/ionicons/master/src/svg/school-outline.svg" alt=""><span>Teacher</span></a>
+      <a href="#" class="gs-card"><img src="https://raw.githubusercontent.com/ionic-team/ionicons/master/src/svg/desktop-outline.svg" alt=""><span>School Leader</span></a>
+      <a href="#" class="gs-card"><img src="https://raw.githubusercontent.com/ionic-team/ionicons/master/src/svg/home-outline.svg"   alt=""><span>Parent</span></a>
+      <a href="#" class="gs-card"><img src="https://raw.githubusercontent.com/ionic-team/ionicons/master/src/svg/backpack-outline.svg" alt=""><span>Student</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ AWARDS ░░ -->
+<section class="section">
+  <div class="container">
+    <h2 class="headline center">MathFun is a multi-award<br><span class="orange">winner</span></h2>
+
+    <div class="awards-grid">
+      <img src="https://i.imgur.com/tbjXoti.png" alt="">
+      <img src="https://i.imgur.com/t7xAQKD.png" alt="">
+      <img src="https://i.imgur.com/j0L2l5U.png" alt="">
+      <img src="https://i.imgur.com/6UuZ2n3.png" alt="">
+      <img src="https://i.imgur.com/p2cOAnB.png" alt="">
+      <img src="https://i.imgur.com/5tn2n4Z.png" alt="">
+      <img src="https://i.imgur.com/NkKgjQH.png" alt="">
+      <img src="https://i.imgur.com/aTk8s9d.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ░░ COMPANION ░░ -->
+<section class="section light">
+  <div class="container">
+    <h2 class="headline center">MathFun is your learning companion – anytime, anywhere</h2>
+    <p class="subhead center small">Available on</p>
+
+    <div class="stores">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/apple.svg"   alt="App Store">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googleplay.svg" alt="Google Play">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/edge.svg"       alt="Web">
+    </div>
+
+    <img class="devices" src="https://images.unsplash.com/photo-1587614382346-acd977736f90?w=1000" alt="">
+  </div>
+</section>
+
 <!-- ░░ INTEGRATIONS ░░ -->
-<section class="section integrations light">
+<section class="section integrations">
   <div class="container">
     <h2 class="headline center">Fully integrated into your<br>Education <span class="orange">EcoSystem</span></h2>
 
     <div class="logo-cards">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googleclassroom.svg" alt="Google Classroom">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/microsoft.svg"        alt="Microsoft">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/clever.svg"          alt="Clever">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googleclassroom.svg"  alt="Google Classroom">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/microsoft.svg"         alt="Microsoft">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/clever.svg"           alt="Clever">
     </div>
   </div>
 </section>
 
 <!-- ░░ FOOTER ░░ -->
-<footer class="site-footer">
+<footer class="site-footer" id="contact">
   <div class="container foot-grid">
 
     <div>
       <h4>Company</h4>
       <ul>
-        <li><a href="#">About&nbsp;Us</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Book a Demo</a></li>
-        <li><a href="#">Sales Enquiry</a></li>
-        <li><a href="#">Careers</a></li>
+        <li><a href="#">About Us</a></li><li><a href="#">Contact</a></li><li><a href="#">Support</a></li>
+        <li><a href="#">Book A Demo</a></li><li><a href="#">Sales Enquiry</a></li><li><a href="#">Careers</a></li>
         <li><a href="#">Academic Board</a></li>
       </ul>
     </div>
@@ -188,19 +230,16 @@
 
     <div>
       <div class="social">
-        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/facebook.svg"  alt="fb"></a>
-        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg" alt="ig"></a>
-        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/twitter.svg"   alt="tw"></a>
-        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linkedin.svg"  alt="in"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/facebook.svg"  alt=""></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg" alt=""></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/twitter.svg"   alt=""></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linkedin.svg"  alt=""></a>
       </div>
-
       <div class="cert">
         <img src="https://i.imgur.com/tnyS5zj.png" alt="kidSAFE certified">
       </div>
     </div>
-
   </div>
-
   <p class="copy small">© 2025 MathFun. All rights reserved.</p>
 </footer>
 
