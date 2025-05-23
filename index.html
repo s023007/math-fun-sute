@@ -3,136 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>MathFun – Learn & Play</title>
+  <title>MathFun – Learn with Games</title>
 
-  <!-- الأسلوب الرئيسي للموقع -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- أيقونات (اختياري) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- ملفّ جافاسكربت للّغات و القائمة -->
-  <script src="main.js" defer></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- أيقونات -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- التنسيق الرئيسي -->
+  <link rel="stylesheet" href="style.css">
+  <!-- اسكربت القائمة واللغة -->
+  <script defer src="main.js"></script>
 </head>
 <body>
 
-<!-- ░░ HEADER / NAV ░░ -->
-<header>
-  <nav class="top-nav container">
-    <!-- زرّ القائمة للهاتف -->
-    <button id="navToggle" aria-label="Menu" class="hamburger">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-
-    <!-- شعار نصّي (بدل الصورة) -->
-    <a class="logo" href="index.html">MathFun</a>
-
-    <!-- أيقونة اتصال وهميّة -->
-    <a class="call-btn" href="tel:+000000">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-
-    <!-- قائمة الروابط الرئيسـيّة -->
-    <ul class="nav-links" id="primaryMenu">
-      <li><a href="index.html#top">Home</a></li>
-
-      <!-- Games Dropdown -->
-      <li class="dropdown">
-        <a href="games.html" class="dropbtn">Games <i class="fa-solid fa-angle-down"></i></a>
-        <ul class="dropdown-content">
-          <!-- فئات بالمراحل الدراسيّة -->
-          <li class="sub-head">By Year</li>
-          <li><a href="games.html?year=F">Foundation Year</a></li>
-          <li><a href="games.html?year=1">Year 1</a></li>
-          <li><a href="games.html?year=2">Year 2</a></li>
-          <li><a href="games.html?year=3">Year 3</a></li>
-          <li><a href="games.html?year=4">Year 4</a></li>
-          <li><a href="games.html?year=5">Year 5</a></li>
-          <li><a href="games.html?year=6">Year 6</a></li>
-          <li><a href="games.html?year=7">Year 7</a></li>
-          <li><a href="games.html?year=8">Year 8</a></li>
-          <li><a href="games.html?year=9">Year 9</a></li>
-
-          <!-- ألعاب فرديّة -->
-          <li class="sub-head">Popular Activities</li>
-          <li><a href="games.html#counting-stars">Counting Stars</a></li>
-          <li><a href="games.html#addition-game">Addition Game</a></li>
-          <li><a href="games.html#subtraction-challenge">Subtraction Challenge</a></li>
-          <li><a href="games.html#multiplication-quest">Multiplication Quest</a></li>
-          <li><a href="games.html#fractions-explorer">Fractions Explorer</a></li>
-          <li><a href="games.html#geometry-adventure">Geometry Adventure</a></li>
-          <li><a href="games.html#compare-numbers">Compare Numbers</a></li>
-          <li><a href="games.html#drag-right-number">Drag the Right Number</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#parents">Parents</a></li>
-      <li><a href="#teachers">Teachers</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
+<!-- =========== HEADER =========== -->
+<header class="topbar">
+  <button id="burger" class="icon-btn"><i class="fa-solid fa-bars"></i></button>
+  <a href="index.html" class="logo">MathFun</a>
+  <a href="#" class="icon-btn"><i class="fa-solid fa-phone"></i></a>
 </header>
 
-<!-- ░░ HERO SECTION ░░ -->
-<section id="hero" class="hero">
-  <div class="container">
-    <!-- فيديو YouTube مضمَّن – يبقى داخل الصفحة -->
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/2CedV5-yO2A?rel=0&amp;showinfo=0"
-        title="MathFun promo"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+<!-- =========== DRAWER (slides from left) =========== -->
+<aside id="drawer">
+  <div class="drawer-head">
+    <button id="closeDrawer" class="icon-btn">&times;</button>
+    <span class="logo small">MathFun</span>
+
+    <!-- لغة -->
+    <div id="langPicker">
+      <img id="currentFlag" src="https://flagcdn.com/24x18/gb.png" alt="">
+      <span id="currentLang">EN</span>
+      <ul class="lang-list">
+        <li data-flag="gb" data-lang="en">English</li>
+        <li data-flag="sa" data-lang="ar">العربية</li>
+        <li data-flag="fr" data-lang="fr">Français</li>
+        <li data-flag="es" data-lang="es">Español</li>
+      </ul>
     </div>
-
-    <h1 class="tagline">
-      The maths app students love that improves results
-    </h1>
-    <p class="subtitle">
-      Helping learners aged 4-15 excel at maths.
-    </p>
-
-    <a href="games.html" class="primary-btn">Educators Try for Free</a>
   </div>
+
+  <!-- القائمة الرئيسـيّة -->
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+
+    <!-- Games + قائمة فرعيّة -->
+    <li class="has-sub">
+      <input type="checkbox" id="gamesToggle" />
+      <label for="gamesToggle">Games <i class="fa-solid fa-angle-down"></i></label>
+      <ul class="sub">
+        <li class="separator">By Year</li>
+        <li><a href="games.html?year=F">Foundation Year</a></li>
+        <li><a href="games.html?year=1">Year 1</a></li>
+        <li><a href="games.html?year=2">Year 2</a></li>
+        <li><a href="games.html?year=3">Year 3</a></li>
+        <li><a href="games.html?year=4">Year 4</a></li>
+        <li><a href="games.html?year=5">Year 5</a></li>
+        <li><a href="games.html?year=6">Year 6</a></li>
+        <li><a href="games.html?year=7">Year 7</a></li>
+        <li><a href="games.html?year=8">Year 8</a></li>
+        <li><a href="games.html?year=9">Year 9</a></li>
+
+        <li class="separator">Popular</li>
+        <li><a href="games.html#counting-stars">Counting Stars</a></li>
+        <li><a href="games.html#addition-game">Addition Game</a></li>
+        <li><a href="games.html#subtraction-challenge">Subtraction Challenge</a></li>
+        <li><a href="games.html#multiplication-quest">Multiplication Quest</a></li>
+        <li><a href="games.html#fractions-explorer">Fractions Explorer</a></li>
+        <li><a href="games.html#geometry-adventure">Geometry Adventure</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#parents">Parents</a></li>
+    <li><a href="#teachers">Teachers</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</aside>
+<div id="overlay"></div>
+
+<!-- =========== HERO =========== -->
+<section class="hero">
+  <div class="video-box">
+    <iframe src="https://www.youtube.com/embed/EvTnfmCcp9w?rel=0&modestbranding=1&playsinline=1"
+            title="MathFun promo" allowfullscreen></iframe>
+  </div>
+  <h2>The maths app students love that improves results</h2>
+  <p>Helping learners aged 4-15 excel at maths.</p>
+  <a class="btn" href="games.html">Educators Try for Free</a>
 </section>
 
-<!-- ░░ الأجزاء الأخرى للموقع ░░ -->
-<!-- … (Sections for Parents, Teachers, Features, etc. كما هي في نسختك) … -->
+<!-- باقي الأقسام كما ترغب … -->
 
-<!-- ░░ FOOTER ░░ -->
-<footer id="footer">
-  <div class="container footer-grid">
-    <div class="col">
-      <h4>Product</h4>
-      <a href="games.html">Activities</a>
-      <a href="#">Technical Requirements</a>
-      <a href="#">Our Pedagogy</a>
-    </div>
-
-    <div class="col">
-      <h4>Resources</h4>
-      <a href="#">Blog</a>
-      <a href="#">Efficacy Study</a>
-    </div>
-
-    <div class="col">
-      <h4>Company</h4>
-      <a href="#about">About Us</a>
-      <a href="#">Contact</a>
-      <a href="#">Support</a>
-    </div>
-
-    <div class="col social">
-      <!-- روابط مواقع التواصل -->
-      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
-  </div>
-  <p class="copyright">
-    © 2025 MathFun. All rights reserved.
-  </p>
+<footer class="site-footer">
+  © 2025 MathFun.
 </footer>
-
 </body>
 </html>
