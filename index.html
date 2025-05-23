@@ -4,26 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MathFun – Learn with Games</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@400;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== TOP BAR ===== -->
+<!-- ▂▂ TOP BAR ▂▂ -->
 <header class="topbar">
-  <button id="burger" aria-label="menu">&#9776;</button>
-
-  <img src="https://i.ibb.co/4Z3L8q3/mathfun-logo.png" alt="MathFun logo" class="logo"> <!-- استبدل برابط شعارك -->
-
-  <a href="#" class="phone-ico" aria-label="phone">&#9742;</a>
+  <button id="burger" aria-label="menu">☰</button>
+  <h1 class="logo" data-key="logo">MathFun</h1>
+  <a href="#" class="phone-ico" aria-label="phone">☎</a>
 </header>
 
-<!-- ===== OFF-CANVAS MENU ===== -->
+<!-- ▂▂ OFF-CANVAS DRAWER ▂▂ -->
 <aside id="drawer">
-  <!-- header -->
   <div class="drawer-head">
     <button id="closeDrawer" aria-label="close">&times;</button>
-    <img src="https://i.ibb.co/4Z3L8q3/mathfun-logo.png" alt="MathFun logo" class="logo">
+    <h2 class="logo mini">MathFun</h2>
+
     <!-- language picker -->
     <div class="lang-picker" id="langPicker">
       <img src="https://flagcdn.com/24x18/gb.png" id="currentFlag" alt="flag">
@@ -37,53 +37,71 @@
     </div>
   </div>
 
-  <!-- main list -->
   <ul class="drawer-list" id="mainList">
-    <li><a href="#teachers" data-key="navTeachers">For Teachers</a></li>
-    <li><a href="#parents"  data-key="navParents" >For Parents</a></li>
-    <li class="nav-link" data-target="activityPage">Maths Activities &#8250;</li>
-    <li class="nav-link" data-target="countryPage">Choose Country</li>
-    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="#teachers"  data-key="navTeachers">For Teachers</a></li>
+    <li><a href="#parents"   data-key="navParents" >For Parents</a></li>
+
+    <li class="nav-link" data-target="activityPage" data-key="mathAct">Maths Activities ›</li>
+    <li class="nav-link" data-target="countryPage" >Choose Country</li>
+
+    <li><a href="#contact" data-key="contact">Contact Us</a></li>
+
     <li class="cta"><a href="#">Log in</a></li>
-    <li class="cta solid"><a href="#">Try MathFun</a></li>
+    <li class="cta solid"><a href="#" data-key="tryBtn">Try MathFun</a></li>
   </ul>
 
-  <!-- === sub-page: Maths Activities === -->
+  <!-- Maths Activities PAGE -->
   <div class="drawer-page" id="activityPage">
-    <div class="sub-head"><button class="backBtn">&#8249;</button> Maths Activities</div>
-    <ul>
-      <li>Foundation Year</li><li>Year 1</li><li>Year 2</li><li>Year 3</li>
-      <li>Year 4</li><li>Year 5</li><li>Year 6</li><li>Year 7</li>
+    <div class="sub-head"><button class="backBtn">‹</button><span data-key="mathAct">Maths Activities</span></div>
+
+    <h4>By Year Level</h4>
+    <ul class="sub-list">
+      <li>Foundation Year</li><li>Year 1</li><li>Year 2</li><li>Year 3</li><li>Year 4</li>
+      <li>Year 5</li><li>Year 6</li><li>Year 7</li><li>Year 8</li><li>Year 9</li>
+    </ul>
+
+    <h4>By Topics</h4>
+    <ul class="sub-list">
+      <li>Numbers up to 20</li><li>Numbers up to 100</li><li>Numbers up to 1000</li><li>Large numbers</li>
+      <li>Number theory</li><li>Fractions</li><li>Decimals</li><li>Negative numbers</li>
+      <li>Real numbers</li><li>Ratio & proportion</li><li>Percentages</li><li>Powers & roots</li>
+      <li>Sequences</li><li>Algebra & equations</li><li>2D geometry</li><li>The Cartesian plane</li>
+      <li>3D geometry</li><li>Measurement</li><li>Data & statistics</li><li>Probability</li>
+      <li>Mathematical thinking</li><li>Other activities</li>
     </ul>
   </div>
 
-  <!-- === sub-page: Country selector === -->
+  <!-- Country PAGE (بسيطة) -->
   <div class="drawer-page" id="countryPage">
-    <div class="sub-head"><button class="backBtn">&#8249;</button> Choose your country</div>
-    <ul>
-      <li>Africa / Middle East</li>
-      <li>Asia-Pacific</li>
-      <li>Europe</li>
-      <li>North America</li>
-      <li>South America</li>
-      <li>International</li>
+    <div class="sub-head"><button class="backBtn">‹</button>Choose your country</div>
+    <ul class="sub-list">
+      <li>Africa / Middle East</li><li>Asia-Pacific</li><li>Europe</li>
+      <li>North America</li><li>South America</li><li>International</li>
     </ul>
   </div>
 </aside>
-
-<!-- overlay -->
 <div id="overlay"></div>
 
-<!-- ===== HERO (نفس السابق) ===== -->
+<!-- ▂▂ HERO ▂▂ -->
 <section class="hero">
-  <div class="container">
-    <h2 data-key="heroTitle">Discover Math the Fun Way!</h2>
-    <p  data-key="heroText">Interactive educational games for kids aged 5 – 12</p>
-    <a href="#games" class="btn btn-primary" data-key="btnStart">Get Started</a>
+  <div class="container hero-inner">
+    <!-- Video preview -->
+    <div class="video-frame">
+      <img src="https://i.ibb.co/kxDkhtT/hero-video.jpg" alt="preview">  <!-- لقطة ثابتة -->
+      <a class="play-btn" href="https://www.youtube.com/watch?v=EvTnfmCcp9w" target="_blank">►</a>
+    </div>
+
+    <h2 data-key="heroTitle">The maths app students love that improves results</h2>
+    <p  data-key="heroText">Helping learners aged 4-15 excel at maths.</p>
+
+    <div class="cta-row">
+      <a href="#" class="cta-box solid"  data-key="ctaTeach">Educators Try for Free</a>
+      <a href="#" class="cta-box outline" data-key="ctaPar">Parents Try for Free</a>
+    </div>
   </div>
 </section>
 
-<!-- باقي الأقسام كما في الإصدار السابق … -->
+<!-- ▂▂ باقي الأقسام (ألعاب …) يمكن إضافتها كما في النسخة السابقة ▂▂ -->
 
 <script src="main.js"></script>
 </body>
