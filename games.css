@@ -1,0 +1,37 @@
+/* reset أساسى */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;padding:20px;background:#f5f7fa}
+img{max-width:100%;display:block}
+
+.games-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.games-head h1{font-size:1.8rem;color:#ff7200}
+
+/* نفس مكوّن مبدّل اللغات */
+.lang-picker{position:relative;cursor:pointer;font-weight:600}
+.lang-picker img{vertical-align:middle}
+.lang-list{display:none;position:absolute;right:0;top:120%;background:#fff;border:1px solid #ddd;list-style:none}
+.lang-list li{padding:6px 12px;cursor:pointer}
+.lang-picker.open .lang-list{display:block}
+
+.card-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.05);
+      overflow:hidden;display:flex;flex-direction:column}
+.card img{height:120px;object-fit:cover}
+.card h3{padding:14px;font-size:1rem;font-weight:600}
+.card button{margin:0 14px 18px;padding:10px;border:none;border-radius:24px;
+             background:#ff7200;color:#fff;font-weight:600;cursor:pointer}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:2000}
+.modal.show{display:flex}
+.modal-content{background:#fff;border-radius:12px;max-width:500px;width:90%;padding:24px;position:relative}
+.close{position:absolute;top:10px;right:16px;font-size:24px;cursor:pointer}
+
+.addition input{width:80px;padding:6px;margin:0 6px;border:1px solid #ccc;border-radius:6px;text-align:center}
+
+/* drag game */
+.dropzone{width:80px;height:80px;border:2px dashed #ccc;border-radius:10px;font-size:2rem;
+          display:flex;align-items:center;justify-content:center;margin:14px auto}
+.digits{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.digits span{width:50px;height:50px;background:#ff7200;color:#fff;border-radius:50%;
+             display:flex;align-items:center;justify-content:center;font-weight:600;font-size:1.2rem;cursor:grab}
