@@ -1,37 +1,58 @@
-/* reset أساسى */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Poppins',sans-serif;padding:20px;background:#f5f7fa}
-img{max-width:100%;display:block}
+/* ---- متغيّرات ---- */
+:root{
+  --orange:#ff7a08;
+  --blue:#0052cc;
+  --radius:18px;
+  --shadow:0 4px 10px rgba(0,0,0,.08);
+  font-family:'Poppins',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f7f9fc}
 
-.games-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
-.games-head h1{font-size:1.8rem;color:#ff7200}
+/* -------- HEADER -------- */
+.topbar{
+  background:#fff;padding:.7rem 1rem;display:flex;align-items:center;gap:1rem;
+  border-bottom:1px solid #eee;position:sticky;top:0;z-index:900;
+}
+.topbar .back{font-size:1.4rem;color:var(--orange)}
+.topbar h1{font-size:1.15rem;font-weight:600}
+.topbar small{font-weight:400;color:#555}
+.topbar button{margin-left:auto;font-size:1.3rem;background:none;border:0}
 
-/* نفس مكوّن مبدّل اللغات */
-.lang-picker{position:relative;cursor:pointer;font-weight:600}
-.lang-picker img{vertical-align:middle}
-.lang-list{display:none;position:absolute;right:0;top:120%;background:#fff;border:1px solid #ddd;list-style:none}
-.lang-list li{padding:6px 12px;cursor:pointer}
-.lang-picker.open .lang-list{display:block}
+/* -------- CARDS GRID -------- */
+.cards{
+  padding:1rem;display:grid;gap:1rem;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+}
+.card{
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card-body{padding:.8rem .9rem;flex:1;display:flex;flex-direction:column}
+.card-body h3{font-size:.9rem;font-weight:600;line-height:1.2;flex:1}
+.card-body small{color:#69788c;font-size:.75rem;display:block;margin-top:.2rem}
+.play-btn{
+  margin-top:.8rem;background:var(--orange);color:#fff;font-weight:600;
+  border:0;border-radius:50%;width:44px;height:44px;align-self:flex-end;
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+}
 
-.card-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.card{background:#fff;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.05);
-      overflow:hidden;display:flex;flex-direction:column}
-.card img{height:120px;object-fit:cover}
-.card h3{padding:14px;font-size:1rem;font-weight:600}
-.card button{margin:0 14px 18px;padding:10px;border:none;border-radius:24px;
-             background:#ff7200;color:#fff;font-weight:600;cursor:pointer}
+/* -------- MODAL -------- */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;
+       align-items:center;justify-content:center;padding:1rem;z-index:1000;}
+.modal-dialog{
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+  width:100%;max-width:550px;padding:1.5rem;position:relative;
+}
+.modal .close{
+  position:absolute;top:.6rem;right:.8rem;font-size:1.6rem;background:none;border:0;
+}
+.modal h2{margin-bottom:1.2rem;font-size:1.3rem}
 
-/* modal */
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:2000}
-.modal.show{display:flex}
-.modal-content{background:#fff;border-radius:12px;max-width:500px;width:90%;padding:24px;position:relative}
-.close{position:absolute;top:10px;right:16px;font-size:24px;cursor:pointer}
-
-.addition input{width:80px;padding:6px;margin:0 6px;border:1px solid #ccc;border-radius:6px;text-align:center}
-
-/* drag game */
-.dropzone{width:80px;height:80px;border:2px dashed #ccc;border-radius:10px;font-size:2rem;
-          display:flex;align-items:center;justify-content:center;margin:14px auto}
-.digits{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.digits span{width:50px;height:50px;background:#ff7200;color:#fff;border-radius:50%;
-             display:flex;align-items:center;justify-content:center;font-weight:600;font-size:1.2rem;cursor:grab}
+/* game-specific helpers */
+.game-body{font-size:1.15rem;text-align:center}
+.game-body input{padding:.4rem .6rem;font-size:1rem;border:1px solid #ccc;border-radius:6px;width:120px}
+.game-body button{padding:.42rem 1rem;border:0;border-radius:6px;background:var(--orange);color:#fff}
+.feedback{margin-top:1rem;font-weight:600}
+.correct{color:green}.wrong{color:red}
