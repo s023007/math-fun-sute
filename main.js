@@ -1,4 +1,4 @@
-/* ========== Drawer ========== */
+/* ===== Drawer ===== */
 const burger   = document.getElementById('burger');
 const drawer   = document.getElementById('drawer');
 const closeBtn = document.getElementById('closeDrawer');
@@ -7,7 +7,7 @@ const overlay  = document.getElementById('overlay');
 burger.onclick = ()=>{drawer.classList.add('open');overlay.classList.add('show');};
 closeBtn.onclick = overlay.onclick = ()=>{drawer.classList.remove('open');overlay.classList.remove('show');};
 
-/* تبديل الصفحات داخل القائمة */
+/* تبديل الصفحات داخل drawer */
 document.querySelectorAll('.nav-link').forEach(link=>{
   link.onclick = ()=>{
     document.getElementById('mainList').style.display='none';
@@ -22,7 +22,7 @@ document.querySelectorAll('.backBtn').forEach(btn=>{
   };
 });
 
-/* ========== Language picker ========== */
+/* ===== Language picker ===== */
 const picker  = document.getElementById('langPicker');
 const flagImg = document.getElementById('currentFlag');
 const langTxt = document.getElementById('currentLang');
@@ -39,18 +39,21 @@ picker.onclick = e=>{
   }
 };
 
-/* ========== Translations ========== */
+/* ===== Translations ===== */
 const translations={
-  ar:{logo:'متعة الرياضيات',heroTitle:'تطبيق الرياضيات الذي يحبه الطلاب ويحسن النتائج',
-      heroText:'يساعد المتعلمين من 4-15 عامًا على التفوق في الرياضيات.',
+  ar:{logo:'متعة الرياضيات',heroTitle:'التطبيق الذي يحبه الطلاب ويحسن النتائج',
+      heroText:'يساعد المتعلمين من عمر 4-15 على التفوق في الرياضيات.',
       ctaTeach:'جربه مجانًا للمعلمين',ctaPar:'جربه مجانًا للأهل',
-      navTeachers:'للمعلمين',navParents:'للأهل',mathAct:'أنشطة الرياضيات',tryBtn:'جرّب MathFun'},
-  fr:{logo:'MathFun',heroTitle:'L’application de maths que les élèves adorent et qui améliore les résultats',
-      heroText:'Pour les apprenants de 4 à 15 ans.',ctaTeach:'Essai gratuit – Enseignants',ctaPar:'Essai gratuit – Parents',
-      navTeachers:'Enseignants',navParents:'Parents',mathAct:'Activités de maths',tryBtn:'Essayer MathFun'},
-  es:{logo:'MathFun',heroTitle:'La app de matemáticas que encanta a los estudiantes y mejora resultados',
-      heroText:'Para alumnos de 4-15 años.',ctaTeach:'Prueba gratis – Docentes',ctaPar:'Prueba gratis – Padres',
-      navTeachers:'Para profesores',navParents:'Para padres',mathAct:'Actividades de matemáticas',tryBtn:'Probar MathFun'}
+      navTeachers:'للمعلمين',navParents:'للأهل',mathAct:'أنشطة الرياضيات',
+      tryBtn:'جرّب MathFun',explore:'استكشف الأنشطة'},
+  fr:{logo:'MathFun',heroTitle:'L’application de maths que les élèves adorent',
+      heroText:'Pour les apprenants de 4-15 ans.',ctaTeach:'Essai gratuit – Enseignants',
+      ctaPar:'Essai gratuit – Parents',navTeachers:'Enseignants',navParents:'Parents',
+      mathAct:'Activités de maths',tryBtn:'Essayer MathFun',explore:'Explorer les activités'},
+  es:{logo:'MathFun',heroTitle:'La app de matemáticas que encanta a los estudiantes',
+      heroText:'Para alumnos de 4-15 años.',ctaTeach:'Prueba gratis – Docentes',
+      ctaPar:'Prueba gratis – Padres',navTeachers:'Profesores',navParents:'Padres',
+      mathAct:'Actividades de matemáticas',tryBtn:'Probar MathFun',explore:'Explorar actividades'}
 };
 /* حفظ الإنجليزية الأصلية */
 translations.en={};
@@ -63,6 +66,5 @@ function applyLang(l){
     const k=el.dataset.key;
     el.textContent = (l==='en') ? translations.en[k] : translations[l]?.[k]||translations.en[k];
   });
-  /* تغيّر الشعار في التوب بار والدروار */
   document.querySelectorAll('.logo').forEach(el=>el.textContent=document.querySelector('[data-key="logo"]').textContent);
 }
