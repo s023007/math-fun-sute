@@ -72,3 +72,60 @@ html[dir="rtl"] .drawer-head{text-align:center}
 html[dir="rtl"] .drawer-list li.nav-link{flex-direction:row-reverse}
 html[dir="rtl"] .sub-head{flex-direction:row-reverse}
 html[dir="rtl"] .lang-picker .lang-list{right:auto;left:0}
+/* ==== HERO video iframe ==== */
+.video-frame iframe{width:100%;height:100%;border:0}
+
+/* زر Explore Activities */
+.big-cta{
+  display:inline-block;margin-top:28px;background:#ff7200;color:#fff;
+  font-weight:600;padding:14px 38px;border-radius:8px;font-size:1rem}
+
+/* ==== SECTION UTILITIES ==== */
+.section       {padding:70px 0}
+.section.light {background:#eef6ff}
+.left-orange   {color:#ff7200;text-align:left;font-size:1.6rem;margin-bottom:30px}
+
+/* ==== COLLAGE ==== */
+.collage{display:flex;flex-direction:column;gap:20px;margin-bottom:34px}
+.collage img{border-radius:16px}
+
+/* ==== HEADLINES ==== */
+.headline{font-size:1.8rem;font-weight:700;margin:30px 0 14px}
+.headline.center{text-align:center}
+.orange{color:#ff7200}
+.subhead{font-size:1.05rem;color:#555}
+.subhead.center{ text-align:center }
+.subhead.small{max-width:640px;margin:0 auto 26px }
+
+/* ==== LEVELS BAR ==== */
+.levels{display:flex;justify-content:center;gap:16px;margin:16px 0 34px;list-style:none}
+.levels li{
+  width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:#e0e4eb;font-weight:600;color:#37474f}
+.levels li.active{background:#ff7200;color:#fff}
+
+/* ==== ACTIVITY CARDS ==== */
+.card-grid{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.act-card{background:#fff;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.05);overflow:hidden}
+.act-card img{width:100%;height:140px;object-fit:cover}
+.act-card h3{padding:16px;font-size:1rem}
+.tag{display:inline-block;margin:0 0 16px 16px;background:#e0f2ff;color:#0277bd;font-size:.72rem;padding:4px 10px;border-radius:14px}
+
+/* ==== METRICS ==== */
+.stats{background:#ffffff}
+.metrics-grid{
+  display:grid;gap:40px;text-align:center;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.number{font-size:2rem;font-weight:700}
+.purple{color:#a64dff}.pink{color:#d81b7d}.blue{color:#2196f3}
+.green{color:#009688}.orange{color:#ff7200}.yellow{color:#fdd835}
+
+/* ==== INTEGRATION LOGOS ==== */
+.integrations .logo-cards{
+  display:flex;flex-direction:column;gap:24px;align-items:center;margin-top:34px}
+.logo-cards img{background:#fff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.05);padding:24px;width:90%;max-width:480px}
+
+/* ==== SMALL TEXT ==== */
+.small{font-size:.85rem}
+
+/* ————— احتفظ بباقي التنسيقات السابقة (topbar, drawer, hero …) كما هي ————— */
