@@ -1,76 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>MathFun – Games</title>
-  <link rel="stylesheet" href="games.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Grade 1 Maths Games – MathFun</title>
+
+  <link rel="stylesheet" href="games.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script defer src="games.js"></script>
 </head>
 <body>
 
-<header class="games-head">
-  <h1 id="gamesTitle">Educational Games</h1>
-
-  <!-- مُبدّل اللغة يستخدم نفس الكود الموجود في الصفحة الرئيسة -->
-  <div class="lang-picker" id="langPickerGames">
-    <img src="https://flagcdn.com/24x18/gb.png" id="flagG"> <span id="langG">EN</span>
-    <ul class="lang-list">
-      <li data-lang="en" data-flag="gb">English</li>
-      <li data-lang="ar" data-flag="sa">العربية</li>
-      <li data-lang="fr" data-flag="fr">Français</li>
-      <li data-lang="es" data-flag="es">Español</li>
-    </ul>
-  </div>
+<header class="topbar">
+  <a href="index.html" class="back"><i class="fa fa-home"></i></a>
+  <h1>Maths Games & Worksheets<br><small>Year 1</small></h1>
+  <button id="filterBtn"><i class="fa-solid fa-filter"></i></button>
 </header>
 
-<main id="cardArea" class="card-grid">
-  <!-- البطاقات تُنشأ ديناميكياً من games.js -->
+<main class="cards" id="gamesGrid">
+  <!-- البطاقات تُنشأ آليًا بواسطة JS -->
 </main>
 
-<!-- نافذة اللعبة -->
-<section id="gameModal" class="modal">
-  <div class="modal-content">
-    <span id="closeM" class="close">&times;</span>
-    <div id="gameArea"></div>
+<!-- نافذة الـ Modal المشتركة لكلّ الألعاب -->
+<section class="modal" id="gameModal" hidden>
+  <div class="modal-dialog">
+    <button class="close">&times;</button>
+    <h2 id="gTitle"></h2>
+    <div id="gRoot" class="game-body"><!-- تُحقَن اللعبة هنا --></div>
   </div>
 </section>
 
-<!-- قوالب الألعاب (HTML معرّف داخل template) -->
-<template id="tpl_addition">
-  <div class="addition">
-    <h2 data-i18n="addTitle">Addition Game</h2>
-    <p>
-      <span id="addA"></span> +
-      <span id="addB"></span> =
-      <input id="addInput" type="number">
-      <button id="addChk" data-i18n="check">Check</button>
-    </p>
-    <p id="addMsg"></p>
-  </div>
-</template>
-
-<template id="tpl_compare">
-  <div class="compare">
-    <h2 data-i18n="cmpTitle">Compare Numbers</h2>
-    <p id="cmpEquation"></p>
-    <button class="cmpBtn" data-val=">">&gt;</button>
-    <button class="cmpBtn" data-val="=">=</button>
-    <button class="cmpBtn" data-val="<">&lt;</button>
-    <p id="cmpMsg"></p>
-  </div>
-</template>
-
-<template id="tpl_drag">
-  <div class="drag">
-    <h2 data-i18n="dragTitle">Drag the Right Number</h2>
-    <p data-i18n="dragInstr">Drag the correct digit into the box.</p>
-    <div class="dropzone" id="dropBox">?</div>
-    <div class="digits" id="digitBank"></div>
-    <p id="dragMsg"></p>
-  </div>
-</template>
-
-<script src="games.js"></script>
 </body>
 </html>
