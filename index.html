@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MathFun – Learn with Games</title>
 
-  <!-- Google Fonts -->
+  <!-- Google-Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@400;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,14 +18,75 @@
   <a href="#" class="phone-ico" aria-label="phone">☎</a>
 </header>
 
-<!-- ░░ OFF-CANVAS MENU (كما في الإصدار السابق) ░░ -->
-<aside id="drawer"> … نفس الكود السابق … </aside>
+<!-- ░░ OFF-CANVAS DRAWER ░░ -->
+<aside id="drawer">
+  <div class="drawer-head">
+    <button id="closeDrawer" aria-label="close">&times;</button>
+    <h2 class="logo mini">MathFun</h2>
+
+    <!-- language picker -->
+    <div class="lang-picker" id="langPicker">
+      <img src="https://flagcdn.com/24x18/gb.png" id="currentFlag" alt="flag">
+      <span id="currentLang">EN</span>
+      <ul class="lang-list">
+        <li data-lang="en" data-flag="gb">English</li>
+        <li data-lang="ar" data-flag="sa">العربية</li>
+        <li data-lang="fr" data-flag="fr">Français</li>
+        <li data-lang="es" data-flag="es">Español</li>
+      </ul>
+    </div>
+  </div>
+
+  <ul class="drawer-list" id="mainList">
+    <li><a href="#teachers" data-key="navTeachers">For Teachers</a></li>
+    <li><a href="#parents"  data-key="navParents" >For Parents</a></li>
+
+    <li class="nav-link" data-target="activityPage" data-key="mathAct">Maths Activities ›</li>
+    <li class="nav-link" data-target="countryPage">Choose Country</li>
+
+    <li><a href="#contact" data-key="contact">Contact Us</a></li>
+
+    <li class="cta"><a href="#">Log in</a></li>
+    <li class="cta solid"><a href="#" data-key="tryBtn">Try MathFun</a></li>
+  </ul>
+
+  <!-- Maths Activities PAGE -->
+  <div class="drawer-page" id="activityPage">
+    <div class="sub-head"><button class="backBtn">‹</button><span data-key="mathAct">Maths Activities</span></div>
+
+    <h4>By Year Level</h4>
+    <ul class="sub-list">
+      <li>Foundation Year</li><li>Year 1</li><li>Year 2</li><li>Year 3</li><li>Year 4</li>
+      <li>Year 5</li><li>Year 6</li><li>Year 7</li><li>Year 8</li><li>Year 9</li>
+    </ul>
+
+    <h4>By Topics</h4>
+    <ul class="sub-list">
+      <li>Numbers up to 20</li><li>Numbers up to 100</li><li>Numbers up to 1000</li><li>Large numbers</li>
+      <li>Number theory</li><li>Fractions</li><li>Decimals</li><li>Negative numbers</li>
+      <li>Real numbers</li><li>Ratio & proportion</li><li>Percentages</li><li>Powers & roots</li>
+      <li>Sequences</li><li>Algebra & equations</li><li>2D geometry</li><li>The Cartesian plane</li>
+      <li>3D geometry</li><li>Measurement</li><li>Data & statistics</li><li>Probability</li>
+      <li>Mathematical thinking</li><li>Other activities</li>
+    </ul>
+  </div>
+
+  <!-- Country PAGE -->
+  <div class="drawer-page" id="countryPage">
+    <div class="sub-head"><button class="backBtn">‹</button>Choose your country</div>
+    <ul class="sub-list">
+      <li>Africa / Middle East</li><li>Asia-Pacific</li><li>Europe</li>
+      <li>North America</li><li>South America</li><li>International</li>
+    </ul>
+  </div>
+</aside>
 <div id="overlay"></div>
 
 <!-- ░░ HERO ░░ -->
 <section class="hero">
   <div class="container hero-inner">
-    <!-- فيديو مُضمَّن -->
+
+    <!-- فيديو مضمّن -->
     <div class="video-frame">
       <iframe src="https://www.youtube.com/embed/EvTnfmCcp9w?rel=0&modestbranding=1&playsinline=1"
               title="MathFun promo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -39,7 +100,6 @@
       <a href="#" class="cta-box outline" data-key="ctaPar">Parents Try for Free</a>
     </div>
 
-    <!-- زر برتقالي كبير مثل “Explore Activities” -->
     <a href="#studentExp" class="big-cta" data-key="explore">Explore Activities</a>
   </div>
 </section>
@@ -50,8 +110,8 @@
     <h2 class="section-title left-orange">Student Experience</h2>
 
     <div class="collage">
-      <img src="https://i.ibb.co/m4xF8n7/collage-top.jpg" alt="">
-      <img src="https://i.ibb.co/w7yKhQY/collage-bottom.jpg" alt="">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=800" alt="">
     </div>
 
     <h2 class="headline">The World’s Best<br>Maths Activities</h2>
@@ -65,20 +125,16 @@
     <h2 class="headline center">A personalised &amp; adaptive<br><span class="orange">learning</span> path</h2>
     <p class="subhead center small">Mathematics activities for primary school children with a rigorous pedagogy designed by education experts.</p>
 
-    <!-- شريط المستويات -->
-    <ul class="levels">
-      <li>F</li><li>1</li><li>2</li><li class="active">3</li><li>4</li><li>5</li><li>6</li>
-    </ul>
+    <ul class="levels"><li>F</li><li>1</li><li>2</li><li class="active">3</li><li>4</li><li>5</li><li>6</li></ul>
 
-    <!-- بطاقة نشاط واحدة كمثال -->
     <div class="card-grid">
       <div class="act-card">
-        <img src="https://i.ibb.co/j8J9xX0/sea.jpg" alt="">
+        <img src="https://images.unsplash.com/photo-1568600891621-2ead54f3f37b?w=600" alt="">
         <h3>Add multiples of 10 or 100 and three-digit numbers</h3>
         <span class="tag">Addition</span>
       </div>
       <div class="act-card">
-        <img src="https://i.ibb.co/pKTWdCR/farm.jpg" alt="">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600" alt="">
         <h3>Recognise halves, thirds, quarters</h3>
         <span class="tag">Fractions</span>
       </div>
@@ -104,15 +160,49 @@
     <h2 class="headline center">Fully integrated into your<br>Education <span class="orange">EcoSystem</span></h2>
 
     <div class="logo-cards">
-      <img src="https://i.ibb.co/5xQqbvB/google-classroom.png" alt="Google Classroom">
-      <img src="https://i.ibb.co/sjxG6vC/microsoft.png"        alt="Microsoft">
-      <img src="https://i.ibb.co/vJGZGrW/clever.png"          alt="Clever">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googleclassroom.svg" alt="Google Classroom">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/microsoft.svg"        alt="Microsoft">
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/clever.svg"          alt="Clever">
     </div>
   </div>
 </section>
 
 <!-- ░░ FOOTER ░░ -->
-<footer><div class="container center small">© 2025 MathFun. All rights reserved.</div></footer>
+<footer class="site-footer">
+  <div class="container foot-grid">
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About&nbsp;Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Book a Demo</a></li>
+        <li><a href="#">Sales Enquiry</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Academic Board</a></li>
+      </ul>
+    </div>
+
+    <div class="big-logo">MathFun</div>
+
+    <div>
+      <div class="social">
+        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/facebook.svg"  alt="fb"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg" alt="ig"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/twitter.svg"   alt="tw"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linkedin.svg"  alt="in"></a>
+      </div>
+
+      <div class="cert">
+        <img src="https://i.imgur.com/tnyS5zj.png" alt="kidSAFE certified">
+      </div>
+    </div>
+
+  </div>
+
+  <p class="copy small">© 2025 MathFun. All rights reserved.</p>
+</footer>
 
 <script src="main.js"></script>
 </body>
